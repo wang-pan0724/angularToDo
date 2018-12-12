@@ -1,0 +1,15 @@
+<div class="box">
+  <h1>vuex TODO</h1>
+  <div class="iputItem">
+      <input type="text">
+      <button (click)="add">提交</button>
+  </div>
+  <div class="listBox">
+      <ul *ngIf="todos.length>0">
+          <li *ngFor='let item of todos'>
+              <span>{{item.id}}</span>
+              <b (click)="deleteFun(item.id)">x</b>
+          </li>
+      </ul>
+  </div>
+</div>
